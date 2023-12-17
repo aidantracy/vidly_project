@@ -5,6 +5,7 @@ const genres = require("./routers/genres")
 const customers = require("./routers/customers")
 const movies = require("./routers/movies")
 const rentals = require("./routers/rentals")
+const users = require("./routers/users")
 const Joi = require("joi")
 Joi.objectId = require("joi-objectid")(Joi);
 
@@ -18,6 +19,7 @@ app.use("/api/genres", genres);
 app.use("/api/customers", customers)
 app.use("/api/movies", movies)
 app.use("/api/rentals", rentals)
+app.use("/api/users", users)
 
 
 const port = process.env.PORT || 3000;
